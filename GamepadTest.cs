@@ -20,11 +20,11 @@ public class GamepadTest : MonoBehaviour
         if (buttonReleased) Debug.Log("Button Released");
 
         // 1D Axis values
-        float axisValue = GamepadInput.GetAxis(GamepadAxis.DPadX, info);
+        float axisValue = GamepadInput.GetAxis(testAxis, info);
         if (axisValue != 0f) Debug.Log("Axis: " + axisValue);
 
         // 2D Stick values
-        Vector2 stickValue = GamepadInput.GetStick(GamepadStick.LeftStick, info);
+        Vector2 stickValue = GamepadInput.GetStick(testStick, info);
         if (stickValue != Vector2.zero) Debug.Log("Stick: " + stickValue);
     }
 }

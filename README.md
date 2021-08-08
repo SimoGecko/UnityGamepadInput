@@ -14,8 +14,8 @@ Vector2 stickValue   = GamepadInput.GetStick(GamepadStick.LeftStick, info);
 ```
 
 ## Features
-- Simple to use interface that mimicks Unity's `Input.GetKey(...)` and Input.GetMouseButton()`
-- Get the input from all controllers without having to worry about mappings, platform or Unity's built in buttons and axes indices
+- Simple to use interface that mimicks Unity's `Input.GetKey(...)` and `Input.GetMouseButton()`
+- Get the input from all controllers without having to worry about mappings, platform or Unity's built-in buttons and axes indices
 - Get input from any controller or just a specific one
 - Supports all popular controllers, including *Xbox 360, Xbox One, Xbox SeriesX/S, PS2, PS3, PS4, PS5, Steam Controller, Generic Pc Gamepads, Nintendo Switch Pro Controller,* and *Nintendo Joycons*
 - Customize the mappings and add new controller types
@@ -23,10 +23,10 @@ Vector2 stickValue   = GamepadInput.GetStick(GamepadStick.LeftStick, info);
 - No need to worry about different controllers on different platforms all mapping to different values
 
 ## Setup
-1. Copy `GamepadInput.cs` in your project under `Assets/`
+1. Copy `GamepadInput.cs` and `controller_mappings_data.csv` in your project under `Assets/`
 2. Create a new GameObject, assign `GamepadInput.cs` to it
-3. Load the mappings by dragging `controller_mappings_data.csv` in the `mappingsData` field of the script, then right clicking the script header and selecting `Apply Mappings`
-4. Add the content of `InputManager.txt` to the end of your Input Manager found at `ProjectSettings/InputManager.asset`
+3. Load the mappings by dragging `controller_mappings_data.csv` in the `Mappings Data` field of the script, then right-clicking the script header and selecting `Apply Mappings`. This will create all controller mappings that you can inspect and modify.
+4. Add the content of `InputManager.txt` to the end of your Input Manager found at `ProjectSettings/InputManager.asset` (you might need to restart Unity for the changes to take effect)
 5. Done!
 6. Start using any gamepad input in your scripts, or test the input using the code found in `GamepadTest.cs`
 

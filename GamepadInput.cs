@@ -65,7 +65,7 @@ public class GamepadInput : MonoBehaviour
 
     [SerializeField] private GamepadPlatform currentPlatform = GamepadPlatform.Windows;
     [SerializeField] private PlatformMappings[] mappings;
-    [SerializeField] private TextAsset mappingsData;
+    public TextAsset mappingsData;
 
     private GamepadRawData[] gamepadRawData = null;
     private GamepadRawData[] oldGamepadRawData = null;
@@ -208,7 +208,7 @@ public class GamepadInput : MonoBehaviour
     }
 
     [ContextMenu("Apply Mappings")]
-    private static void ApplyMappings()
+    private void ApplyMappings()
     {
         Instance.mappings = ParseMappings(instance.mappingsData);
     }
